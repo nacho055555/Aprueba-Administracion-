@@ -1,0 +1,14 @@
+services:
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_DEMO_MODE: "true"
+
+    container_name: aprueba_admin_frontend
+
+    ports:
+      - "8080:80"
+
+    restart: unless-stopped
